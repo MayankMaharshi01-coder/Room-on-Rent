@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+  <%- include('partials/navbar.ejs') %>
+  <main class="flex justify-center border-2 shadow-xl  flex-col items-center">
+    <li class="bg-yellow-500 pt-4 border-2 list-none shadow-2xl p-4 rounded-md m-12 min-w-96 justify-center gap-2 items-center">
+      <form action="/host/add-home" method="POST" class="flex flex-col gap-4 bg-yellow-500">
+        <input type="text" name="homeImage"  value="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" placeholder="Enter Home imageURL" required class="placeholder:text-yellow-500 border-1 focus:bg-gray-800 border-black rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="text" name="homeName" placeholder="Enter Home Name" required class="placeholder:text-yellow-500 border-1 border-black focus:bg-gray-800 rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="text" name="ownerName" placeholder="Enter your (home owner's) Name" required class="placeholder:text-yellow-500 border-1 border-black focus:bg-gray-800 rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="text" name="location" placeholder="Enter Location" required class="placeholder:text-yellow-500 border-1 border-black focus:bg-gray-800 rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="number" name="price" placeholder="Price per night" required class="placeholder:text-yellow-500 border-1 border-black focus:bg-gray-800 rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="tel" name="phone" value="9876543210" placeholder="Enter (dummy) Contact Number" required class="placeholder:text-yellow-500 border-1 border-black focus:bg-gray-800 rounded-md p-2 w-full bg-black text-yellow-500">  
+        <input type="email" name="email" value="example@gmail.com" placeholder="Enter (dummy) Email ID" required class="placeholder:text-yellow-500 border-1 border-black rounded-md p-2 w-full bg-black text-yellow-500 focus:bg-gray-800">
+        <button type="submit" class="text-2xl font-semibold font-serif items-center p-3 rounded-md py-2 text-xl. px-6 bg-black text-yellow-500">Add your Home</button>
+      </form>
+    </li>
+  </main>
+<%- include('partials/footer.ejs') %>

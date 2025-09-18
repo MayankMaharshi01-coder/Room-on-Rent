@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+  <main class="shadow-lg flex flex-col items-center p-4 justify-center">
+    <h1 class="text-4xl font-bold font-serif pt-2 pb-3 text-yellow-500">Our Regular Users:</h1>
+    <% memberDetails.forEach(member => { %>
+      <div class="shadow-md border-2 p-4 m-4 rounded-md min-w-96 flex flex-col justify-center">
+        <h2 class="font-bold font-serif text-3xl text-yellow-500"><span class="text-black">Name: </span><%= member.name %></h2>
+        <h2 class="font-bold font-serif text-2xl text-yellow-500"><span class="text-black">Email:</span> <span class=" hover:underline"><%= member.email %></span></h2>
+        <h2 class="font-bold font-serif text-2xl text-yellow-500"><span class="text-black">Mobile no. :</span> <%= member.phone %></h2>
+      </div>
+    <% }); %>
+    <a href="/member-see" class="bg-black text-yellow-500 rounded-md py-2 text-xl px-6 hover:bg-gray-800 font-semibold font-serif text-center w-96">Create your own ID</a>
+  </main>
+<%- include('partials/footer') %>

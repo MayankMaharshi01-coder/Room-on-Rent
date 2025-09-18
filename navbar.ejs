@@ -1,0 +1,7 @@
+<header class="flex justify-between w-full bg-yellow-500 text-base font-semibold font-serif items-center p-3 text-black">
+  <div class="space-x-4 text-2xl">
+    <a href="/" class="px-2 py-2 rounded-md font-semibold <%= currentPage === 'home' ? 'bg-yellow-300 text-black' : 'hover:bg-yellow-300' %>">Home</a>
+    <a href="/host/add-home" class="px-4 py-2 rounded-md font-semibold <%= currentPage === 'addHome' ? 'bg-yellow-300' : 'hover:bg-yellow-300' %>">Add-Room</a>
+  </div>
+  <a href="/member" class="bg-black text-yellow-500 rounded-md py-2 text-xl px-6 <%= currentPage === 'members' ? 'bg-gray-800' : 'hover:bg-gray-800' %>">Create  ID</a>
+</header>

@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+  <main class="flex justify-center border-2 shadow-xl  flex-col items-center">
+    <li class="bg-yellow-500 pt-4 border-2 list-none shadow-2xl p-4 rounded-md m-12 min-w-96 justify-center gap-2 items-center">
+      <form action="/member" method="POST" class="flex flex-col gap-4 bg-yellow-500" required class="placeholder:text-yellow-500 border-1 focus:bg-gray-800 border-black rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="text" placeholder="Enter Your Name" name="name" required class="placeholder:text-yellow-500 border-1 focus:bg-gray-800 border-black rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="email" placeholder="Enter Your Email" name="email" required class="placeholder:text-yellow-500 border-1 focus:bg-gray-800 border-black rounded-md p-2 w-full bg-black text-yellow-500">
+        <input type="tel" placeholder="Enter Your Phone Number" name="phone" required class="placeholder:text-yellow-500 border-1 focus:bg-gray-800 border-black rounded-md p-2 w-full bg-black text-yellow-500">
+        <button type="submit" class="text-2xl font-semibold font-serif items-center p-3 rounded-md py-2 text-xl. px-6 bg-black text-yellow-500">Submit</button>
+      </form>
+    </li>
+  </main>
+<%- include('partials/footer') %>

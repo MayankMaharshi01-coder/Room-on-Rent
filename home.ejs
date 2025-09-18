@@ -1,0 +1,29 @@
+<%- include('partials/header.ejs') %>
+  <%- include('partials/navbar.ejs') %>
+  <main class="flex border-2 shadow-xl justify-center flex-col items-center">
+    <h1 class="text-4xl font-bold font-serif p-4 text-yellow-500">Available Rooms:</h1>
+      <input type="text" id="input" placeholder="Find room: Enter Location" class="border-2 min-w-96 mb-7 border-black p-2 text-black bg-yellow-500 rounded-full placeholder:text-gray-800">
+      <div class="flex justify-between gap-9">
+      <button onclick="clearInput()" class="p-2 border-2 px-8  border-black rounded-md font-serif text-xl hover:bg-gray-800 text-yellow-500 bg-black">Clear Input</button>
+      <button onclick="findHome()" class="p-2 border-2 px-8  border-black rounded-md font-serif text-xl hover:bg-gray-800 text-yellow-500 bg-black">Find Room</button>
+      </div>
+    <div id="result"></div>
+    <ul class="p-4 rounded-md m-5 min-w-96 min-h-96">
+      <% homeDetails.forEach(home => { %>
+      <li class="cards pt-4 border-2 shadow-sm p-4 rounded-md mt-4">
+        <div class="flex flex-col">
+            <img src="<%= home.homeImage %>" alt="home image">
+            <p class="font-serif text-2xl font-semibold">Home Name: <%= home.homeName %></p>
+            <p class="font-serif text-3xl font-bold">Owner: <span class=" text-yellow-500"><%= home.ownerName %></span></p>
+            <h1 class="font-serif text-2xl font-semibold">Location: <%= home.location %></h1>
+            <p class="font-serif text-2xl">Price: ₹<%= home.price %></p>
+            <p class="font-serif text-2xl">Mobile no. : <%= home.phone %></p>
+            <p class="font-serif text-2xl">Email: <span class="hover:underline hover:text-yellow-500 cursor-pointer"><%= home.email %></span></p>
+        </div>
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/host/add-home" class="bg-black text-yellow-500 mb-4 rounded-md py-2 text-xl px-6 hover:bg-gray-800 font-semibold font-serif text-center w-96">Rent your own room</a>
+  </main>
+  <script src="/src/input.js"></script>
+<%- include('partials/footer.ejs') %>
